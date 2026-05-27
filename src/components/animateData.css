@@ -1,0 +1,322 @@
+
+	.el {
+	  position: absolute;
+	  width: 100px;
+	  height: 100px;
+	  background: #572B53;
+	}
+	.animateContainer{
+		position: absolute;
+		bottom:-300px;
+		border:1px solid #323232;
+		border-radius: 10px;
+		background-color: #212121;
+		left:50px;
+		width:calc(100% - 310px);
+		z-index: 999999;
+		height:200px;
+		display: flex;
+		transition: .5s;
+	}
+	.eventContainer{
+		overflow: hidden;
+		width: 130px;
+		height:180px;
+		margin-top:10px;
+		border-radius: 10px;
+		background-color: var(--mainColorGrayBg2);
+		margin-left: 10px;
+	}
+	.animateHeaderText{
+		margin:0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		height: 25px;
+		line-height: 25px;
+		user-select: none;
+		color: white;
+		font-weight: normal;
+		border-bottom: 1px solid white;
+	}
+	.listContainer{
+		overflow: scroll;
+		width: 105%;
+		height: 145px;
+		padding-bottom: 20px;
+		background-color: transparent;
+	}
+	.listItem{
+		width: 90%;
+		margin-left: 4%;
+		margin-top: 5px;
+		background-color: #212121;
+		border-radius: 10px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		display: flex;
+		color: white;
+		font-weight: normal;
+		user-select: none;
+		transition: .2s;
+		cursor: pointer;
+		justify-content: center;
+		align-items: center;
+	}
+	.listItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.listItemText{
+		width: 80%;
+		height: 100%;
+		text-align: center;
+		color: white;
+		margin: 0;
+		padding: 0;
+		line-height: 25px;
+	}
+	.headerButton{
+		width: 130px;
+		height: 25px;
+		background-color: #323232;
+		position: relative;
+		text-align: center;
+		line-height: 25px;
+		color: white;
+		font-weight: normal;
+		border-radius: 10px;
+	}
+	.nodeList{
+		position: relative;
+		width: 135px;
+		overflow: scroll;
+		height: 150px;
+		border-radius: 10px;
+		background-color: #323232;
+	}
+	.nodeItem{
+		position: relative;
+		width: 130px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-left: 8px;
+		height: 30px;
+		background-color: #212121;
+		border-radius: 10px;
+		color: white;
+		text-align: center;
+		line-height: 30px;
+		transition: .2s;
+		margin-top: 5px;
+		font-weight: normal;
+		cursor: pointer;
+	}
+	.nodeItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.mojs-interactive__controller{
+		position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    z-index: 0;
+	}
+	.timeInput{
+		width: 70%;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		font-weight: normal;
+		outline: none;
+		border: none;
+		color: white;
+		background-color: transparent;
+	}
+	.line{
+		width: calc(100% - 282px);
+		margin-left: 0px;
+		position: relative;
+		height: 25px;
+		border-radius: 5px;
+		margin-top: 5px;
+	}
+	.deleteButton{
+		margin-left: 16px;
+		height: 30px;
+		margin-top: 5px;
+		width: 30px;
+		background-color: transparent;
+		transition: .2s;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.deleteButton:hover{
+		background-color: #212121;
+	}
+	.frame{
+		position: absolute;
+		top: 2px;
+		z-index: 2;
+		height: 20px;
+		width: 20px;
+		border-radius: 10px;
+		background-color: transparent;
+	}
+	.repeatItem{
+		cursor: pointer;
+		transition: .2s;
+		border-radius: 3px;
+		height: 25px;background-color: rgba(128,128,128,0.5);margin-left: 0;float: left;border-left: 1px solid white;box-sizing: border-box;
+	}
+	.repeatItem:hover{
+		background-color: #212121;
+	}
+	.focusFrame{
+		box-shadow: 0 0 0 2px white;
+	}
+	.dragPoint{
+		position: absolute;
+		height: 10px;
+		width: 10px;
+		border-radius: 10px;
+		background-color: var(--mainColorBlue2);
+		top: 8px;
+		cursor: w-resize;
+	}
+	.menuItem{
+		background-color: transparent;
+		transition: .2s;
+		cursor: pointer;
+		height: 25px;
+		margin-top: 5px;
+		color: white;
+		text-align: center;
+		line-height: 25px;
+		font-weight: normal;
+		color: white;
+		width: 90%;
+		margin-left: 5%;
+		border-radius: 5px;
+	}
+	.menuItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.repeatInput{
+		width: 60%;
+		margin-left: 5%;
+		height: 25px;
+		margin-top: 5px;
+		text-align: center;
+		color: white;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.editing{
+		position: absolute;
+		width: 230px;
+		height: 35px;
+		background-color: #212121;
+		border-radius: 10px;
+		z-index: 1000001;
+		display: flex;
+		animation: showEditing .5s;
+		animation-timing-function: var(--timingFunction1);
+		animation-fill-mode: forwards;
+	}
+	@keyframes showEditing {
+		from{
+			transform: scale(0);
+		}to{
+			transform: scale(1);
+		}
+	}
+	.editingInput{
+		width: 140px;
+		margin-left: 5px;
+		margin-top: 5px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		color: white;
+		font-weight: normal;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	}
+	.editingConfirm{
+		width: 50px;
+		padding: 0;
+		margin-left: 5px;
+		height: 25px;
+		margin-top: 5px;
+		border-radius: 10px;
+		background-color: var(--mainColorBlue2);
+		color: white;
+		cursor: pointer;
+		font-size: 12px;
+		
+	}
+	
+	.editingCancle{
+		width: 20px;
+		margin-left: 5px;
+		border-radius: 10px;
+		height: 25px;
+		margin-top: 5px;
+		border-radius: 5px;
+		background-color: transparent;
+		cursor: pointer;
+		transition: .2s;
+	}
+	.editingCancle:hover{
+		background-color: #323232;
+	}
+	
+	.emptyPropertype_image{
+		position: absolute;left:65%;top:45px;height:60%;width: auto;z-index: 2;
+	}
+	
+	.emptyPropertype{
+		position: absolute;left: 45%;top: 70px;height: 60%;width: 200px;z-index: 2;
+	}
+	
+	.emptyPropertype_text1{
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		font-size: 20px;
+		margin: 0;padding: 0;color: white;
+		margin-bottom: 16px;
+	}
+	.emptyPropertype_text2{
+		margin: 0;padding: 0;color: white;
+	}
+	.newProItem{
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 5px;
+		height: 25px;
+		background-color: transparent;
+		transition: .2s;
+		color: white;
+		text-align: center;
+		line-height: 25px;
+		font-weight: normal;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.newProItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.addNewList{
+		position: absolute;
+		width: 150px;
+		height: auto;
+		padding: 5px;
+		background-color: #212121;
+		border-radius: 10px;
+		z-index: 1000001;
+		animation: showEditing .5s;
+		animation-timing-function: var(--timingFunction1);
+		animation-fill-mode: forwards;
+	}

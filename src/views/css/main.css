@@ -1,0 +1,529 @@
+	.treeLayersItem{
+		width: 100%;
+		height: 25px;
+		line-height: 25px;
+		font-weight: 400;
+		border-bottom: 1px solid var(--mainColorGray);
+		cursor: pointer;
+		transition: .2s;
+	}
+	.treeLayersItem:hover{
+		background-color: var(--mainColorGray);
+	}
+	.STitem{
+		width: 100%;height: 29px;font-size: 12px;color: var(--mainColorBlue);letter-spacing: 1px;transition: .2s;
+	}
+	.STitem:hover{
+		background-color: rgba(215,215,215,0.8);
+	}
+	#scale2tree{
+		border-radius: 5px;
+		height: 25px;
+		transition: .2s;
+		position: relative;
+		margin: 0;
+		margin-left: 10px;
+		margin-top: 5px;
+		z-index: 105;
+		width: 30px;
+		background-color:transparent;
+		float: left;
+		box-shadow: none;
+		overflow: hidden;
+		
+	}
+.treeDomItem{
+	background-color: rebeccapurple;
+	height: 30px;
+	width: 100%;
+	transition: .2s;
+}
+.treeDomItem:hover{
+	background-color: red;
+}
+#main {
+  position: relative;
+  display: inline-block;
+  height: calc(100% - 70px);
+  margin-top: 10px;
+  width: 99%;
+  min-width: 1526px;
+  background-color: transparent;
+}
+#leftBar {
+  position: absolute;
+  width: 45px;
+  left: 0px;
+  height: 100%;
+  z-index: 99998;
+  background:var(--mainDarkBg2) /*rgba(255, 255, 255, 1)*/;
+  backdrop-filter: blur(30px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+  transition: 350ms;
+}
+
+.bottomBarButton {
+  width: 86px;
+  height: 35px;
+  float: left;
+  margin-left: 20px;
+  background: var(--mainColorGreen);
+  border-radius: 10px;
+  margin-top: 5px;
+  color: white;
+  font-size: 100%;
+}
+.domTreePlayIcon{
+    height: 46px;
+    width: 46px;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position-x: 25%;
+    background-position-y: 50%;
+    background-color: transparent;
+    padding: 0;
+    float: left;
+}
+.treeItem{
+  margin-top: 10px;
+  height: 83px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 15%;
+  cursor: default;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(230,230,230,0.5);
+  border-radius: 10px;
+}
+
+.treeItem_tree{
+  margin-top: 5px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0%;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0px;
+  border-top: 1px solid var(--mainColorGray);
+  transition: .1s;
+}
+
+.treeItem_tree:hover{
+	background-color: rgba(205,205,205,0.8);
+}
+
+
+.rightOptionList{
+  width:15%;
+  height:95%;
+  position: absolute;
+  left:0;
+  z-index: 3;
+  background-color:var(--mainDarkBg2) /*rgba(255,255,255,0.8)*/;
+  margin-top:0%;
+  top:0px;
+  border-radius: 10px 0 0 10px;
+}
+.rightOptionList_item{
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width:35px;
+  height:35px;
+  padding: 0;
+  margin-top: 10px;
+  background-color: transparent;
+}
+.treeItem_DomScale{
+  position: relative;
+  border:3px solid var(--mainColorBlue);
+  margin:0;
+  height: 65px;
+  display: flex;
+  overflow:hidden;
+  flex-direction:column;
+  width:115px;
+  background-color: white;
+  border-radius: 10px;
+}
+.treeItem_DomTree{
+  position: relative;
+  border:none;
+  margin:0;
+  margin-top: 5px;
+  cursor: pointer;
+  height: 25px;
+  display: flex;
+  overflow:hidden;
+  flex-direction:column;
+  width:100%;
+  background-color:transparent;
+  border-radius: 0px;
+  transition: .3s;
+}
+
+
+.treeDomText{
+display: flex;
+color: var(--mainColorBlue);
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Chrome/Safari/Opera */
+-khtml-user-select: none; /* Konqueror */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+#selectDomOut{
+    position: relative;
+    height:50px;
+    width:100%;
+    margin-left: 0;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#selectDomInner{
+    height: 43px;
+    width:90%;
+    margin-left: 5%;
+    position: relative;
+    margin-top: 3px;
+    background: #F3F3F3;
+    border-radius: 12px;
+    text-align: left;
+}
+#domTreePlayGroup{
+    width: 65%;
+    height: 30px;
+    margin-top: 7px;
+    color:white;
+    font-weight: bold;
+    background: #8BA4FF;
+    border-radius: 10px;    
+}
+#selectDom{
+    height: 100%;
+    width: 73%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    color: #ACACAC;
+    text-align: center;
+    background-color: transparent;
+    float: left;
+}
+#selectDomButton{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-top: 4px;
+    background-color: white;
+    padding: 0;
+    outline: none;
+    border:10px solid #8BA4FF;
+    border-radius: 10px;
+}
+#domTreePlay{
+	transition: .3s;
+    z-index: 98;
+	right:260px;
+	position: absolute;
+    height: calc(100% - 80px);
+    border-radius: 10px;
+    width:200px;
+    top:1vh;
+	box-shadow: -5px 5px 15px rgba(0,0,0,0.25);
+    background-color: rgba(245,245,245,0.7);
+	backdrop-filter: blur(10px);
+}
+.domTreePlayItem{
+    cursor: pointer;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #8BA4FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+.containerDevice {
+  position: absolute;
+  height: 37px;
+  overflow: hidden;
+  top: 4px;
+  right: 200px;
+  width: 132px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+}
+.deviceButton {
+  transition: 0.2s linear;
+  height: 31px;
+  margin-top: 3px;
+  width: 31px;
+  margin-left: 10px;
+  float: left;
+  border-radius: 8px;
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+.callEdit{
+  cursor: pointer;
+  z-index: 3;
+}
+.callEdit::before{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  height:10px;
+  width:10px;
+  background-color: white;
+  border-radius: 5px;
+}
+#bottomCenterButton {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  padding: 0;
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  background: var(--mainColorBlue);
+  border: 0px solid #c7d2f9;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: 0.1s linear;
+}
+#bottomCenterButton:hover {
+  border: 5px solid #c7d2f9;
+}
+#bottomCenterButton::before {
+  content: "";
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  background-color: white;
+}
+#bottomCenterButton::after {
+  content: "";
+  height: 80%;
+  width: 5px;
+  position: absolute;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  background-color: white;
+}
+#drawMain {
+  width: calc(100% - 305px);
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 50px;
+  z-index: 1;
+}
+#bottomBar {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+
+  background:var(--mainDarkBg2) /*#ffffff*/;
+  /*box-shadow: 0px 4px 4px rgba(199, 199, 199, 0.25);*/
+  backdrop-filter: blur(30px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 10px;
+  bottom: 0;
+}
+#projectFrameOut {
+	--cursor:url("../../assets/icons/cursor.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background:var(--mainDarkBg1) /*#ffffff*/;
+  transform: scale(1);
+  /*border: 1px dashed #000000;*/
+  box-sizing: border-box;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  cursor: var(--cursor),auto;
+}
+.projectFrameInner {
+  position: absolute;
+  width: 1536px;
+  transform-origin: left top;
+  height: 721px;
+  transform: scale(0.785);
+  background: white/*rgba(239, 237, 237, 0.5);*/
+}
+#rightBar {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  right: 0px;
+  background:var(--mainDarkBg2) /*rgba(255, 255, 255, 0.98)*/;
+  /*backdrop-filter: blur(30px);*/
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 20px;
+}
+.share {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 15px;
+  float: right;
+  background-color: transparent;
+}
+#projectContainer {
+  width: 100%;
+  height: 100vh;
+  background-color:var(--mainDarkBg1) /*#efefef*/;
+  font-family: Righteous;
+  font-style: Regular;
+}
+#backToFronText {
+  float: left;
+  color: var(--color_text1);
+  margin-left: 5%;
+  margin-top: 10px;
+  height: 35px;
+  padding: 0;
+  cursor: pointer;
+}
+.layerButton {
+  background-color: white;
+  height: 30px;
+  width: 3em;
+  padding: 0;
+  color: var(--mainColorBlue);
+  float: left;
+  margin-left: 1%;
+  font-size: 105%;
+  margin-top: 0.6em;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.headerLayerChoseT {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  float: right;
+  margin-top: 6px;
+  right: 2px;
+}
+.sideTransButton {
+  outline: none;
+  border: 1px solid #80b3fe;
+  position: absolute;
+  background-color: white;
+}
+.alignCircle{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	background-color: transparent;
+	border-radius: 12px;
+	border:none /*2px solid var(--mainColorOrange1)*/;
+	cursor: crosshair;
+	z-index: 1000;/*高于连接线*/
+	position:absolute;
+}
+.alignCircle:before{
+	content: "";
+	position: absolute;
+	left:-25%;
+	top:-25%;
+	width: 150%;
+	height:150%;
+	background-color: transparent;
+}
+/*旋转与圆角快速拖动框*/
+	.radiusRotate{
+		z-index: 9998;
+		width: 120px;
+		height:25px;
+		background-color: #212121;
+		border-radius: 10px;
+		position: absolute;
+		display: flex;
+		transition: .2s;
+	}
+.headerTip{
+	position: absolute;
+	width: auto;
+	left: 50%;
+	top:8px;
+	transform: translateX(-50%) scale(0);
+	padding-left: 16px;
+	padding-right: 16px;
+	z-index: 99;
+	background-color: white;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	border-radius: 15px;
+	color: #212121;
+	font-weight: normal;
+	animation: showTip .5s;
+	animation-timing-function: var(--timingFunction1);
+	animation-fill-mode: forwards;
+}
+@keyframes showTip {
+	from{
+		transform: translateX(-50%)  scale(0);
+		opacity: 0;
+	}to{
+		transform: translateX(-50%)  scale(1);
+		opacity: 1;
+	}
+}
+.recoverButton{
+	width: 30px;
+	height:30px;
+	background-color: transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .2s;
+	float: left;
+	margin-top: 8px;
+	margin-left: 16px;
+	animation: showRecover .5s;
+	animation-fill-mode: forwards;
+}
+.recoverButton:hover{
+	background-color: #323232;
+}
+@keyframes showRecover {
+	from{
+		transform:translateX(32px);
+	}to{
+		transform:translateX(0px);
+	}
+}

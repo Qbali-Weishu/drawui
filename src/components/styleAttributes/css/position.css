@@ -1,0 +1,39 @@
+pre{
+	    font-weight:normal;
+	    padding:0;
+	    margin:0;
+	    font-family: 'Sail';
+	    font-style: normal;
+	    height: 30px;
+	    float: left;
+	    margin-left: 0px;
+	    text-align: left;
+	    color: var(--mainColorGray8A);
+	    line-height: 30px;
+	}
+	#floatEdit{
+	    position: relative;
+	    height: 35px;
+	    width:100%;
+	    margin-left: 5%;
+	    border-radius: 10px;
+	    padding: 0;
+	    background-color:transparent;
+	    border-bottom: 1px solid var(--mainColorGray);
+	}
+	.floatButton{
+		background-color: var(--mainColorGray3);
+		color: var(--mainColorGray2);
+		font-weight: bold;
+		display: inline-block;
+		width: 22%;
+		margin-left: 3%;
+		margin-top: 5px;
+		border-radius: 5px;
+		height:90%;
+		transition: .15s;
+		padding: 0;
+	}
+	.filterTypeButton:hover{
+		background-color: var(--mainColorGrayBg2);
+	}

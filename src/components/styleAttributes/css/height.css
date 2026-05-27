@@ -1,0 +1,35 @@
+pre{
+    font-weight:normal;
+    padding:0;
+    margin:0;
+    font-family: 'Sail';
+    font-style: normal;
+    height: 30px;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+    color: var(--mainColorGray8A);
+    line-height: 30px;
+}
+#heightEdit{
+    position: relative;
+    height: 35px;
+    width:90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 0;
+    background-color:#323232 /*transparent*/;
+    border-bottom: 1px solid var(--mainColorGray);
+}
+#drawUISetHeight{
+	/*输入框*/
+    background-color: transparent;
+    text-align: left;
+    height: 30px;
+    color:white;
+    outline: none;
+    border: none;
+    margin-right: 5px;
+    font-weight: normal;
+    width:100px;
+}

@@ -1,0 +1,146 @@
+	.qucikEditOut {
+		transition: 0s;
+		position: relative;
+		height: 35px;
+		width: 90%;
+		margin-left: 5%;
+		padding: 0;
+		background-color: transparent;
+		border-bottom: 1px solid var(--mainColorGray);
+	}
+	.effectItem{
+		width: 100%;
+		height: 30px;
+		margin-top: 5px;
+		display: flex;
+		background-color:transparent /*var(--mainDarkBg1)*/;
+		overflow: hidden;
+	}
+	.openBordButton{
+		cursor: e-resize;
+		width: 30px;height: 30px;background-color: transparent;transition: .2s;
+	}
+	
+	.openBordButton:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.effectType{
+		width: calc(100% - 30px);
+		height: 30px;
+		background-color: transparent;cursor: pointer;transition: .2s;
+		line-height: 30px;
+		text-align: center;
+		color: var(--mainTextColor1);
+		font-weight: normal;
+	}
+	.effectType:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.removeEffect{
+		margin-left: 8px;
+		cursor: pointer;
+		width: calc(20% - 8px);
+		height: 30px;
+		border-radius: 8px;
+		background-color:transparent;
+		transition: .2s;
+	}
+	.removeEffect:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.filterTypeButton:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.headerText{
+		user-select: none;
+		line-height: 30px;
+		height: 30px;
+		width: 70px;
+		text-align: center;
+		background-color: var(--mainColorGray3);
+		font-weight: normal;
+		color: var(--mainColorBlue3);
+		border-radius: 10px;
+	}
+	.output{
+	    height: 300px;
+	    overflow: hidden;
+	    position: relative;
+	    background-color: var(--background-primary);
+	    /*overflow: hidden;*/
+	    padding: 1em;}
+	#default-example_ {
+	    background: transparent;
+	   /* perspective: 800px;
+	    perspective-origin: 150% 150%;*/
+	}
+	@supports (display:flex)
+	.output section {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	.output section {
+	    height: 100%;
+	    text-align: center;
+	}
+	#example-element_ {
+		margin-top: 50px;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	    width: 100px;
+	    height: 100px;
+	    perspective: 550px;
+	    transform-style: preserve-3d;
+	}
+	.transition-all {
+	    transition: all .3s ease-in;
+	}
+	.face {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    backface-visibility: inherit;
+	    font-size: 60px;
+	    color: #fff;
+	}
+	
+	.front {
+	    background: rgba(90,90,90,.7);
+	    transform: translateZ(50px);
+	}
+	.back {
+	    background: rgba(0,210,0,.7);
+	    transform: rotateY(180deg) translateZ(50px);
+	}
+	.right {
+	    background: rgba(210,0,0,.7);
+	    transform: rotateY(90deg) translateZ(50px);
+	}
+	.left {
+	    background: rgba(0,0,210,.7);
+	    transform: rotateY(-90deg) translateZ(50px);
+	}
+	.top {
+	    background: rgba(210,210,0,.7);
+	    transform: rotateX(90deg) translateZ(50px);
+	}
+	.bottom {
+	    background: rgba(210,0,210,.7);
+	    transform: rotateX(-90deg) translateZ(50px);
+	}
+	.itemOut{
+		height: 35px;width: 100%;background-color: transparent;margin-top:8px;width: 150px;margin-left: 8px;
+	}
+	.valueTitle{
+		margin: 0;padding: 0;font-weight: normal;float: left;width: 80px;margin-left: 10px;line-height: 35px;color: var(--mainColorWhite1);
+	}
+	.valueItem{
+		display:flex;width:90%;height:35px;background-color:var(--mainColorGrayBg2);border-radius:10px;overflow:hidden
+	}
+	.valueInput{
+		width:80%;height:30px;line-height:30px;outline:none;border:none;background:transparent;text-align:center;color:var(--mainTextColor1)
+	}

@@ -1,0 +1,35 @@
+	pre{
+	    font-weight:normal;
+	    padding:0;
+	    margin:0;
+	    font-family: 'Sail';
+	    font-style: normal;
+	    height: 30px;
+	    float: left;
+	    margin-left: 10px;
+	    text-align: left;
+	    color: var(--mainColorGray8A);
+	    line-height: 30px;
+	}
+	#widthEdit{
+		overflow: hidden;
+	    position: relative;
+	    height: 35px;
+	    width:90%;
+		margin-left: 5%;
+		border-radius: 10px;
+	    padding: 0;
+	    background-color:#323232 /*transparent*/;
+	    border-bottom: 1px solid var(--mainColorGray);
+	}
+	#drawUISetWidth{
+	    background-color: transparent;
+	    text-align: left;
+		font-weight: normal;
+	    height: 30px;
+	    color:white/*var(--mainColorGray2)*/;
+	    outline: none;
+	    border: none;
+	    margin-right: 5px;
+	    width:100px;
+	}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<link rel='stylesheet' href="../dist/support.css"/>
+	<script src="ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+	<script src="ajax/libs/twitter-bootstrap/2.3.0/bootstrap.min.js" integrity="sha256-u+l2mGjpmGK/mFgUncmMcFKdMijvV+J3odlDJZSNUu8=" crossorigin="anonymous"></script>
+	<link rel='stylesheet' href="./codeCss/css1.css"/>
+	<link rel='stylesheet' href="./codeCss/css2.css"/>
+	<link rel='stylesheet' href="./codeCss/css3.css"/>
+	<link rel='stylesheet' href="./codeCss/css4.css"/>
+	<script>
+		var require = { paths: { vs: 'node_modules/monaco-editor/min/vs' } };
+	</script>
+	
+	<script src="node_modules/monaco-editor/min/vs/loader.js"></script>
+	<script src="node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+	<script src="node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+	
+	<style>
+		#loadList pre{
+			background-color: transparent;
+			border: none;
+		}
+		body h3{
+			
+		}
+	</style>
+	<script>
+		var System={};
+	  window.addEventListener('mousewheel', function(event){
+			 if (event.ctrlKey === true || event.metaKey) {
+				   event.preventDefault();
+			 }
+		   },{ passive: false})
+		
+		'use strict';
+		
+		var editor = null,
+			diffEditor = null;
+		
+		window.callCodeEditor=(preCode="")=>{
+			if(editor){
+				var oldModel = editor.getModel();
+				if (oldModel) {
+					oldModel.dispose();
+				}
+				document.getElementById("editor").removeAttribute("data-keybinding-context")
+				document.getElementById("editor").innerHTML=""
+				editor=null
+			}
+				
+			
+			require(['vs/editor/editor.main'], function () {
+				//
+				changeTheme();
+				
+				loadSample(preCode)
+				$('.theme-picker').change(function () {
+					changeTheme(this.selectedIndex);
+				});
+					
+					
+				$('#inline-diff-checkbox').change(function () {
+					diffEditor.updateOptions({
+						renderSideBySide: !$(this).is(':checked')
+					});
+				});
+			});
+					
+			window.onresize = function () {
+				if (editor) {
+					editor.layout();
+				}
+				if (diffEditor) {
+					diffEditor.layout();
+				}
+			};
+		}
+		var preloaded = {};
+		(function () {
+			var elements = Array.prototype.slice.call(document.querySelectorAll('pre[data-preload]'), 0);
+		
+			elements.forEach(function (el) {
+				var path = el.getAttribute('data-preload');
+				preloaded[path] = el.innerText || el.textContent;
+				el.parentNode.removeChild(el);
+			});
+		})();
+		
+		function loadSample(preCode) {
+			$('.loading.editor').show();
+			if (!editor) {
+				alert("hello")
+				$('#editor').empty();
+
+				editor = monaco.editor.create(document.getElementById('editor'), {
+					model: null,
+					readOnly:false,
+				});
+				if(editor && "function" == typeof define && define.amd) {
+				    delete define.amd;
+				
+				 }
+				 var newModel = monaco.editor.createModel(preCode, 'typescript');
+				editor.setModel(newModel);
+				window.getEditorValue=()=>{
+					return editor.getValue()
+				}
+				window.triggerCode=(code)=>{
+					console.log(code)
+					editor.setValue(code)
+					editor.trigger('anyString','editor.action.formatDocument')
+					editot.setValue(editor.getValue())
+				}
+			}
+			
+			
+			
+			$('.loading.editor').fadeOut({ duration: 300 });
+		}
+		
+		function changeTheme(theme) {
+			var newTheme = theme === 1 ? 'vs-dark' : theme === 0 ? 'vs' : 'hc-black';
+			monaco.editor.setTheme('vs-dark');//newTheme);
+		}
+		
+		function cli(e){
+			e.sropPropagation()
+			e.preventDefault()
+		}
+	</script>
+
+
+	  <style>
+	    .CodeMirror {
+	      width: 300px;
+	      height: 200px;
+	      border: 1px solid #dcdcdc;
+	      margin-bottom: 10px;
+	    }
+		</style>
+  </head>
+  <body style="padding: 0;overflow: hidden;" contenteditable="false" onclick="cli" onfocus="cli">
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+	
+  </body>
+  <style>
+	  /*解决monaco提示框不显示文本问题*/
+	  .left{
+	  	transform: none;
+	  	background-color: transparent;
+	  }
+  </style>
+</html>

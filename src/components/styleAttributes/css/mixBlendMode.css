@@ -1,0 +1,64 @@
+.qucikEditOut {
+		transition: 0s;
+		position: relative;
+		height: 35px;
+		width: 90%;
+		margin-left: 5%;
+		padding: 0;
+		background-color: transparent;
+		border-bottom: 1px solid var(--mainColorGray);
+	}
+	.effectItem{
+		width: 100%;
+		height: 30px;
+		margin-top: 5px;
+		display: flex;
+		background-color:transparent /*var(--mainDarkBg1)*/;
+		overflow: hidden;
+	}
+	.openBordButton{
+		cursor: e-resize;
+		width: 30px;height: 30px;background-color: transparent;transition: .2s;
+	}
+	
+	.openBordButton:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.effectType{
+		width: calc(100% - 30px);
+		height: 30px;
+		background-color: transparent;cursor: pointer;transition: .2s;
+		line-height: 30px;
+		text-align: center;
+		color: var(--mainTextColor1);
+		font-weight: normal;
+	}
+	.effectType:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.removeEffect{
+		margin-left: 8px;
+		cursor: pointer;
+		width: calc(20% - 8px);
+		height: 30px;
+		border-radius: 8px;
+		background-color:transparent;
+		transition: .2s;
+	}
+	.removeEffect:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.filterTypeButton:hover{
+		background-color: var(--mainColorGrayBg2);
+	}
+	.headerText{
+		user-select: none;
+		line-height: 30px;
+		height: 30px;
+		width: 70px;
+		text-align: center;
+		background-color: var(--mainColorGray3);
+		font-weight: normal;
+		color: var(--mainColorBlue3);
+		border-radius: 10px;
+	}

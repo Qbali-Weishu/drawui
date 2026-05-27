@@ -1,0 +1,238 @@
+	.varProvide{
+		transition: .2s;
+		position: absolute;
+		height: 60vh;
+		top: 20vh;
+		width: 400px;
+		left: 50vw;
+		transform: translateX(-50%);
+		border-radius: 15px;
+		z-index: 99999;
+		background-color: #212121;
+	}
+	.header{
+		position: relative;
+		width: 100%;
+		height: 30px;
+	}
+	.varTypeItem{
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 5px;
+		transition: .2s;
+		cursor: pointer;
+		border-radius: 10px;
+		color: white;
+		font-weight: normal;
+		text-align: center;
+		line-height: 25px;
+		height: 25px;
+	}
+	.varTypeItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.list{
+		width: 100%;overflow: scroll;height: calc(100% - 60px);
+	}
+	.input{
+		height: 25px;
+		background-color: white;
+		outline: none;
+		border: none;
+		text-align: center;
+		line-height: 25px;
+		border-radius: 10px;
+		margin-left: 8px;
+		color: #212121;
+		font-weight: normal;
+		width: calc(50% - 40px);
+	}
+	/*数据变量部分*/
+	.dataVarType{
+		margin-top: 8px;
+		width: 100%;
+		height: 30px;
+		display: flex;
+	}
+	/*入参变量部分*/
+	.propsVarType{
+		margin-top: 8px;
+		width: 100%;
+		height: 90px;
+		display: flex;
+	}
+	/*监听变量部分*/
+	.watchVarType{
+		margin-top: 8px;
+		width: 100%;
+		height: 120px;
+		display: flex;
+	}
+	
+	
+	.propsItem_data{
+		cursor: pointer;
+		width: 80%;
+		margin-left: 20%;
+		height: 25px;
+		margin-top: 5px;
+		background-color: var(--mainColorGrayBg2);
+		color: #FFD001;
+		border-radius: 10px;
+		text-align: center;
+		line-height: 25px;
+		font-weight: normal;
+	}
+	
+
+	.opeItem{
+		width: 90%;
+		margin-left: 5%;
+		height: 25px;
+		margin-top: 8px;
+		cursor: pointer;
+		transition: .2s;
+		color: white;
+		text-align: center;
+		line-height: 25px;
+		font-weight: normal;
+		border-radius: 10px;
+	}
+	.opeItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.opeBord{
+		border:2px solid var(--mainColorGrayBg2);z-index: 99999;;position: absolute;height: auto;padding-bottom: 8px;padding-top: 8px;width: 80px;background-color:#212121;border-radius: 10px;
+	}
+	.layerBord{
+		border:2px solid var(--mainColorGrayBg2);
+		z-index: 99999;
+		position: absolute;
+		left:calc(50vw + 210px);
+		top:20vh;
+		height: 60vh;
+		padding-bottom: 8px;
+		padding-top: 8px;
+		box-sizing: border-box;
+		width: 200px;
+		background-color:#212121;
+		border-radius: 10px;
+	}
+	.layer{
+		width: 90%;
+		margin-left: 5%;
+		margin-top: 5px;
+		transition: .2s;
+		cursor: pointer;
+		border-radius: 10px;
+		color: white;
+		font-weight: normal;
+		text-align: center;
+		line-height: 25px;
+	}
+	.layerItem{
+		width: 90%;
+		margin-left: 10%;
+		height: 25px;
+		margin-top: 8px;
+		transition: .2s;
+		border-radius: 10px;
+	}
+	.layerItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
+	.codeBord{
+		border:2px solid var(--mainColorGrayBg2);
+		z-index: 99999;
+		position: absolute;
+		left:calc(50vw + 10px);
+		top:20vh;
+		height: 60vh;
+		padding-bottom: 8px;
+		padding-top: 8px;
+		box-sizing: border-box;
+		width: 400px;
+		background-color:#212121;
+		overflow: scroll;
+		border-radius: 10px;
+		animation: showCodeBord .5s ;
+		animation-fill-mode: forwards ;
+		animation-timing-function: cubic-bezier(.48,-0.1,.03,1.35);
+	}
+	@keyframes showCodeBord {
+		from{
+			transform: scale(0);
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	.tellSpread{
+		width: 15px;
+		height: 2px;
+		border-radius: 5px;
+		background-color: white;
+		position: absolute;
+		right: 5px;
+		transition: .2s;
+	}
+	.blurInput{
+		width: 1px;height: 1px;opacity: 0;outline: none;border: none;position: absolute;left: -10px;top:-10px;
+	}
+	.headerTitle{
+		width: 100%;font-weight: normal;text-align: center;line-height: 25px;height: 30px;color: white;margin: 0;padding: 0;
+	}
+	hr{
+		border: none;outline: none;width: 90%;height: 2px;margin: 0;padding: 0;margin-left: 5%;background-color: white;
+	}
+	.layerTitle{
+		position: relative;
+		width: 100%;height: 30x;text-align: left;background-color: var(--mainColorGrayBg2);border-radius: 10px;padding-left: 8px;box-sizing: border-box;
+	}
+	.codeInfo{
+		width: calc(100% - 40px);
+		height: 60px;
+		background-color: var(--mainColorGrayBg2);
+		border-radius: 10px;
+		margin-left: 10px;
+		transition: .2s;
+		cursor: pointer;
+	}
+	.codeInfo:hover{
+		box-shadow: 0 0 0 3px var(--mainColorGrayBg2);
+	}
+	.saveCodeButton{
+		cursor: pointer;;color: white;text-align: center;line-height: 25px;font-weight: normal;position: absolute;right: 40px;top: 8px;height: 25px;width: 80px;background-color: var(--mainColorBlue2);border-radius: 10px;
+	}
+	.blockText1{
+		width: 80px;text-align: left;padding-left: 24px;box-sizing: border-box;color: white;font-weight: normal;font-size: 14px;line-height: 30px;height: 30px;float: left;
+	}
+	.provideMode{
+		width: 200px;
+		transform: scale(0);
+		transform-origin: left top;
+		height: auto;
+		max-height: 60vh;
+		border: 1px solid var(--mainColorGrayBg2);
+		animation: showProvideMode .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: var(--timingFunction1);
+	}
+	@keyframes showProvideMode {
+		from{
+			transform: scale(0);
+			opacity: 0;
+		}to{
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+	.provideItem{
+		width: 80%;margin-left: 10%;background-color: var(--mainColorGrayBg2);color: white;cursor: pointer;
+		transition: .2s;
+	}
+	.provideItem:hover{
+		background-color: var(--mainColorBlue2);
+	}
